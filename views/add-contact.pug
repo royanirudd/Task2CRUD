@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Add New Contact
+    if errors
+        .error-messages
+            each error in errors
+                p.error= error
+    form(action="/add-contact" method="POST")
+        input(type="text" name="firstName" placeholder="First Name" required)
+        input(type="text" name="lastName" placeholder="Last Name" required)
+        input(type="email" name="email" placeholder="Email" required)
+        input(type="text" name="phoneNumber" placeholder="Phone Number" required)
+        input(type="text" name="address" placeholder="Address")
+        input(type="submit" value="Add Contact")
+    a.btn(href="/contacts") Back to Contacts

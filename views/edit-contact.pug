@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Edit Contact
+    if errors
+        .error-messages
+            each error in errors
+                p.error= error
+    form(action=`/edit-contact/${contact._id}` method="POST")
+        input(type="text" name="firstName" value=contact.firstName placeholder="First Name" required)
+        input(type="text" name="lastName" value=contact.lastName placeholder="Last Name" required)
+        input(type="email" name="email" value=contact.email placeholder="Email" required)
+        input(type="text" name="phoneNumber" value=contact.phoneNumber placeholder="Phone Number" required)
+        input(type="text" name="address" value=contact.address placeholder="Address")
+        input(type="submit" value="Update Contact")
+    a.btn(href="/contacts") Back to Contacts

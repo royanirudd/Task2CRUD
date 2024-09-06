@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1 Contacts
+    .contact-list
+        each contact in contacts
+            .contact-card
+                h2 #{contact.firstName} #{contact.lastName}
+                p Email: #{contact.email}
+                p Phone: #{contact.phoneNumber}
+                if contact.address
+                    p Address: #{contact.address}
+                if editMode
+                    .button-group
+                        a.btn.edit(href=`/edit-contact/${contact._id}`) Edit
+                        a.btn.delete(href=`/delete-contact/${contact._id}`) Delete
+
+    if editMode
+        a.btn(href="/contacts") View Contacts
+    else
+        a.btn(href="/edit-contacts") Edit Contacts
+    a.btn(href="/add-contact") Add New Contact
+    a.btn(href="/") Back to Home
