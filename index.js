@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const Contact = require('./models/Contact.model');
+require('dotenv').config();
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-mongoose.connect('mongodb+srv://royanirudd:nigeria6969@cluster1.t1k2n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1')
+mongoose.connect(process.env.DB_URL)
   .then(() => {
     console.log("Connected to DB!");
   })
