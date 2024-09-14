@@ -1,8 +1,10 @@
 # Task2CRUD
 Task 2 application for Gokul info hiring process
 
-[video](assets/Preview (online-video-cutter.com) (1).mkv)
-
+<video width="640" height="360" controls>
+  <source src="https://github.com/royanirudd/Task2CRUD/raw/main/assets/Preview%20(online-video-cutter.com)%20(1).mkv" type="video/mkv">
+  Your browser does not support the video tag.
+</video>
 
 
 
