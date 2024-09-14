@@ -1,7 +1,7 @@
 # Task2CRUD
 Task 2 application for Gokul info hiring process
 
-[Watch the video](https://github.com/royanirudd/Task2CRUD/raw/main/assets/Preview%20(online-video-cutter.com)%20(1).mkv)
+[![Video Thumbnail](https://github.com/royanirudd/Task2CRUD/raw/main/assets/thumbnail.jpg)](https://github.com/royanirudd/Task2CRUD/raw/main/assets/Preview%20(online-video-cutter.com)%20(1).mkv)
 
 Script:
 I'll demonstrate a contact manager application I've built using MongoDB, Express, Node.js, and Pug templating.
